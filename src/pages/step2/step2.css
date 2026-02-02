@@ -1,0 +1,236 @@
+.life-step {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+  position: relative;
+  background: radial-gradient(
+    circle at bottom center,
+    rgba(70, 133, 196, 0.18),
+    rgba(70, 133, 196, 0.06),
+    #F6FCFE 70%
+  );
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.step-bg-circle {
+  position: absolute;
+  left: 50%;
+  bottom: -260px;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(70, 133, 196, 0.18),
+    rgba(70, 133, 196, 0.06),
+    transparent 70%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.life-step-box {
+  width: 100%;
+  max-width: 800px; 
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 40px 50px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  z-index: 1;
+}
+
+.life-step-box::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    rgba(70, 133, 196, 0.14) 0%,
+    rgba(70, 133, 196, 0.9) 50%,
+    rgba(70, 133, 196, 0.14) 100%
+  );
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.life-step-box:hover {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+.step-title {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  color: #1E293B;
+  margin-bottom: 40px;
+  line-height: 1.4;
+}
+
+
+.traveller-section {
+  border: 1px solid #F1F5F9;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.traveller-header {
+  background-color: #F8FAFC;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #F1F5F9;
+}
+
+.traveller-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: #1E293B;
+  font-size: 16px;
+}
+
+.user-icon {
+  color: #334155;
+  font-size: 16px;
+}
+
+.chevron-icon {
+  color: #64748B;
+  font-size: 14px;
+}
+
+.traveller-form-grid {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 30px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.field input,
+.field select {
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #E2E8F0;
+  background: #ffffff;
+  font-size: 15px;
+  outline: none;
+  color: #334155;
+  width: 100%;
+  height: 52px; 
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.field input::placeholder {
+  color: #94A3B8;
+  opacity: 1;
+}
+
+.field select {
+  color: #334155;
+}
+
+/* Placeholder styling for select if value is empty */
+.field select:invalid {
+  color: #94A3B8;
+}
+
+.field input:hover,
+.field select:hover {
+  border-color: #4685C4;
+}
+
+.field input:focus,
+.field select:focus {
+  background: #ffffff;
+  border-color: #4685C4;
+  box-shadow: 0 0 0 4px rgba(70, 133, 196, 0.1);
+}
+
+.input-error {
+  border-color: #ef4444 !important;
+  background-color: #fff5f5;
+}
+
+.life-error-text {
+  font-size: 12px;
+  color: #ef4444;
+  margin-top: 5px;
+  display: block;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* Date Input Fixes */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+input[type="date"] {
+  position: relative;
+}
+
+/* Footer & Button */
+.step-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.next-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 40px;
+  background: #4685C4;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.next-btn svg {
+  font-size: 14px;
+}
+
+.next-btn:hover {
+  background: #357bd8;
+  box-shadow: 0 8px 20px rgba(53, 123, 216, 0.25);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .life-step-box {
+    padding: 30px 20px;
+  }
+  
+  .traveller-form-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 20px;
+  }
+}
