@@ -76,10 +76,22 @@ function Header({ openForm, setIsMenuOpen, isMenuOpen }) {
         <div className={`header-right ${isMenuOpen ? "open" : ""}`}>
           <nav className="nav">
             <Link to="/" onClick={closeMenu}>Home</Link>
-            <Link to="#" onClick={closeMenu}>About us</Link>
-            <Link to="#" onClick={closeMenu}>Insurance & more</Link>
-            <a href="#" onClick={closeMenu}>Claims</a>
-            <a href="#" onClick={closeMenu}>Resource & Tools</a>
+
+            <button className="nav-link" onClick={closeMenu}>
+              About us
+            </button>
+
+            <button className="nav-link" onClick={closeMenu}>
+              Insurance &amp; more
+            </button>
+
+            <button className="nav-link" onClick={closeMenu}>
+              Claims
+            </button>
+
+            <button className="nav-link" onClick={closeMenu}>
+              Resource &amp; Tools
+            </button>
           </nav>
 
           {openForm && (

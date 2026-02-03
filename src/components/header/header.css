@@ -31,15 +31,21 @@
   gap: 20px;
 }
 
-.nav a {
+.nav a,
+.nav .nav-link {
   text-decoration: none;
   font-size: 17px;
   color: #273846;
   font-weight: 500;
   transition: 0.3s;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav .nav-link:hover {
   color: #4685C4;
 }
 
@@ -148,7 +154,8 @@
     width: 100%;
   }
 
-  .nav a {
+  .nav a,
+  .nav .nav-link {
     font-size: 20px;
     width: 100%;
     text-align: left;
@@ -173,7 +180,6 @@
     z-index: 1045;
   }
 }
-
 
 @media (min-width: 375px) and (max-width: 575px) {
 
@@ -202,7 +208,8 @@
     width: 100%;
   }
 
-  .nav a {
+  .nav a,
+  .nav .nav-link {
     font-size: 18px;
   }
 
@@ -211,7 +218,6 @@
     padding: 10px 14px;
   }
 }
-
 
 @media (min-width: 576px) and (max-width: 768px) {
 
@@ -230,7 +236,8 @@
     gap: 36px;
   }
 
-  .nav a {
+  .nav a,
+  .nav .nav-link {
     font-size: 19px;
   }
 
@@ -239,7 +246,6 @@
     padding: 10px 16px;
   }
 }
-
 
 @media (min-width: 769px) and (max-width: 1024px) {
 
@@ -258,7 +264,8 @@
     gap: 40px;
   }
 
-  .nav a {
+  .nav a,
+  .nav .nav-link {
     font-size: 20px;
   }
 
@@ -268,14 +275,14 @@
   }
 }
 
-
 @media (min-width: 1025px) and (max-width: 1240px) {
 
   .logo img {
     height: 46px;
   }
 
-  .nav a {
+  .nav a,
+  .nav .nav-link {
     font-size: 16px;
   }
 
@@ -285,14 +292,14 @@
   }
 }
 
-
 @media (min-width: 1241px) and (max-width: 1439px) {
 
   .logo img {
     height: 48px;
   }
 
-  .nav a {
+  .nav a,
+  .nav .nav-link {
     font-size: 17px;
   }
 
@@ -302,14 +309,14 @@
   }
 }
 
-
 @media (min-width: 1620px) and (max-width: 1920px) {
 
   .logo img {
     height: 56px;
   }
 
-  .nav a {
+  .nav a,
+  .nav .nav-link {
     font-size: 18px;
   }
 
