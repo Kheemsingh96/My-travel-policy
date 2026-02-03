@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import './testimonials.css';
+import React, { useEffect, useRef, useState } from "react";
+import "./testimonials.css";
 
 import user1 from "../../assets/images/1.png";
 import user2 from "../../assets/images/2.png";
@@ -20,28 +20,33 @@ function Testimonials() {
       { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentSection = sectionRef.current;
+
+    if (currentSection) {
+      observer.observe(currentSection);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentSection) {
+        observer.unobserve(currentSection);
       }
     };
   }, []);
 
   return (
-    <section ref={sectionRef} className={`testimonials-section ${isVisible ? 'visible' : ''}`}>
+    <section
+      ref={sectionRef}
+      className={`testimonials-section ${isVisible ? "visible" : ""}`}
+    >
       <div className="testimonials-container">
-        
-        <h2 className="testimonials-heading">Trusted by Happy Travellers Worldwide</h2>
+        <h2 className="testimonials-heading">
+          Trusted by Happy Travellers Worldwide
+        </h2>
 
         <div className="testimonials-wrapper">
           <button className="nav-btn left-btn">❮</button>
 
           <div className="testimonials-grid">
-            
             <div className="testimonial-card">
               <div className="profile-img">
                 <img src={user1} alt="Jordan Smith" />
@@ -49,8 +54,9 @@ function Testimonials() {
               <h3>Jordan Smith</h3>
               <div className="stars">★★★★★</div>
               <p>
-                The support team delivered excellent service. Their experience and professionalism 
-                stood out. They weren't pushy at all and finished everything quickly and properly.
+                The support team delivered excellent service. Their experience
+                and professionalism stood out. They weren't pushy at all and
+                finished everything quickly and properly.
               </p>
             </div>
 
@@ -61,8 +67,9 @@ function Testimonials() {
               <h3>Liam Johnson</h3>
               <div className="stars">★★★★★</div>
               <p>
-                From beginning to end, the process was incredibly professional and efficient. They 
-                handled all my queries with care, stayed on schedule, and made the trip stress-free.
+                From beginning to end, the process was incredibly professional
+                and efficient. They handled all my queries with care, stayed on
+                schedule, and made the trip stress-free.
               </p>
             </div>
 
@@ -73,16 +80,15 @@ function Testimonials() {
               <h3>Emma Carter</h3>
               <div className="stars">★★★★★</div>
               <p>
-                The support team delivered excellent service. Their experience and professionalism 
-                stood out. They weren't pushy at all and finished everything quickly and properly.
+                The support team delivered excellent service. Their experience
+                and professionalism stood out. They weren't pushy at all and
+                finished everything quickly and properly.
               </p>
             </div>
-
           </div>
 
           <button className="nav-btn right-btn">❯</button>
         </div>
-
       </div>
     </section>
   );
