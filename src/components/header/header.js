@@ -70,7 +70,6 @@ function Header({ openForm, setIsMenuOpen, isMenuOpen }) {
         <div
           className={`menu-overlay ${isMenuOpen ? "show" : ""}`}
           onClick={closeMenu}
-          aria-hidden={!isMenuOpen}
         />
 
         <div className={`header-right ${isMenuOpen ? "open" : ""}`}>
